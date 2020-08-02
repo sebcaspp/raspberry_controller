@@ -2,7 +2,6 @@ from controller.domain.gxcode import *
 from controller.domain.gcode import *
 
 
-""" "G0 X12               ; move to 12mm on the X axis" -> "G0 X12" """
 def clear_comments(string_code:str) -> str:
     pass
 
