@@ -1,6 +1,7 @@
 
 class GCode():
-    pass
+    def gcode_to_string(self):
+        pass
 
 class GCommand(GCode):
     pass
