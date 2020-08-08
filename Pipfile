@@ -7,6 +7,7 @@ verify_ssl = true
 unittest2 = "*"
 
 [packages]
+regex = "*"
 
 [requires]
 python_version = "3.7"
