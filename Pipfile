@@ -8,6 +8,7 @@ unittest2 = "*"
 
 [packages]
 regex = "*"
+gpiozero = "*"
 
 [requires]
 python_version = "3.7"

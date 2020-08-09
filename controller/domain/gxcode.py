@@ -21,3 +21,8 @@ class G1Command(GCommand):
         self.z = z
         self.e = e    
         self.f = f
+    
+    def gcode_to_string(self):
+        stringGcode= "G1Command(x:"+str(self.x)+" "+"y:"+str(self.y)+" "+"z:"+str(self.z)+" "+"e:"+str(self.e)+" "+"f:"+str(self.f)+")"
+        print(stringGcode)
+        return stringGcode
