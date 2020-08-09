@@ -4,7 +4,7 @@ from controller.domain.gxcode import G0Command, G1Command
 from controller.infrastructure.gpio.gpio_control import *
 
 class CurrentValues:
-    def __init__(self, x:float, y:float, z:float, e:float, f:float ):
+    def __init__(self, x:float=0.0, y:float=0.0, z:float=0.0, e:float=0.0, f:float=0.0 ):
         self.x = x
         self.y = y
 
