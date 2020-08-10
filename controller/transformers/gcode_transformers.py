@@ -11,11 +11,11 @@ def clear_comments(string_code:str) -> str:
     return string_code
 
 def transform_string_to_g0_code(string_code:str) -> G0Command:
-    comandosX:float=0.0
-    comandosY:float=0.0
-    comandosZ:float=0.0
-    comandosE:float=0.0
-    comandosF:float=0.0
+    comandosX:float=None
+    comandosY:float=None
+    comandosZ:float=None
+    comandosE:float=None
+    comandosF:float=None
     motores=['X','Y','Z','E','F']
     for i in motores:
         if re.search(i+"\d*|"+i.lower()+"\d*",string_code):

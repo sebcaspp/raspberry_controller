@@ -13,8 +13,8 @@ class GpioControler:
 
 
 class Direction(Enum):
-    NEGATIVE: 1    
-    POSITIVE: 2
+    NEGATIVE = 1    
+    POSITIVE = 2
     
 
 class StepMotor():

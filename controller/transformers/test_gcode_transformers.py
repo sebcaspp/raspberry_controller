@@ -40,11 +40,17 @@ class TestGCodeTransformers(unittest.TestCase):
         result=string_a_g0.gcode_to_string()
         self.assertNotEqual(resultComandosRespuesta,result,"transform_string_to_g0_code deberia de debolver un daño por que falta un comando ")
 
-        resultComandosRespuesta="G0Command(x:0.0 y:13.0 z:14.0 e:15.0 f:1500.0)"
+        resultComandosRespuesta="G0Command(x:None y:13.0 z:14.0 e:15.0 f:1500.0)"
         GCode="g0 Y13 Z14 E15 f1500"
         string_a_g0=transform_string_to_g0_code(GCode)
         result=string_a_g0.gcode_to_string()
-        self.assertEqual(resultComandosRespuesta,result,"transform_string_to_g0_code deberia de debolver un string aunq que falte un comando ")
+        self.assertEqual(resultComandosRespuesta,result,"transform_string_to_g0_code deberia de debolver un string aunq que falte el comando X y deberia debolber X:None ")
+
+        resultComandosRespuesta="G0Command(x:None y:None z:14.0 e:15.0 f:1500.0)"
+        GCode="g0 Z14 E15 f1500"
+        string_a_g0=transform_string_to_g0_code(GCode)
+        result=string_a_g0.gcode_to_string()
+        self.assertEqual(resultComandosRespuesta,result,"transform_string_to_g0_code deberia de debolver un string aunq que falte el comando X y Y deberian de debolver un None")
 
     def test_transform_string_to_gxcode(self):
         GCode="G0 X12 Y13 Z14 E15 f1500"
