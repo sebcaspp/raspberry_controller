@@ -1,0 +1,4 @@
+-i https://pypi.org/simple
+colorzero==1.1
+gpiozero==1.5.1
+regex==2020.7.14
