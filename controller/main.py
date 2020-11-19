@@ -21,7 +21,8 @@ def main():
         "G1 X9.6 Y1.8",
         "G1 X90.6 Y13.8",
         "G1 X9.6 Y1.8",
-        "G1 X90.6 Y13.8",    
+        "G1 X90.6 Y13.8",
+        "G1 x22.2 y32.7 ",    
         ]
     while True:
         for string_command in gcomands:
